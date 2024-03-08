@@ -1,5 +1,8 @@
-TP_NUM = 1
-ZIP_NAME = tpjs
+#TP_NUM = 1
+#ZIP_NAME = tpjs
+
+TP_NUM = 2
+ZIP_NAME = tphtml
 
 TP_DIR = TP${TP_NUM}
 

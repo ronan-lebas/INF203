@@ -1,0 +1,19 @@
+#d1 {
+    border: 1px solid black;
+    padding: 9px;
+}
+
+#d2 img {
+    float: left;
+    margin-right: 11px;
+}
+
+#d2 span {
+    display: block;
+    margin-left: 60px;
+}
+
+#d3 {
+    background-color: lightslategrey;
+    margin: 10px;
+}
