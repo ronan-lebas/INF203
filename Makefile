@@ -1,13 +1,10 @@
-#TP_NUM = 1
-#ZIP_NAME = tpjs
+FOLDERS := tpjs tphtml
+ZIP_FILES := $(addsuffix .zip,$(FOLDERS))
 
-TP_NUM = 2
-ZIP_NAME = tphtml
+all: ${ZIP_FILES}
 
-TP_DIR = TP${TP_NUM}
-
-zip:
-	cd ${TP_DIR}/ && zip -r ../${ZIP_NAME}.zip . -x ".git/*" ".gitignore" "Makefile" "README.md" ".vscode/*" ".DS_Store" ".gitattributes" ".gitmodules" "node_modules/*" "*.json" "*.zip"	
+%.zip: %
+	cd $< && zip -r ../$@ . -x ".git/*" ".gitignore" "Makefile" "README.md" ".vscode/*" ".DS_Store" ".gitattributes" ".gitmodules" "node_modules/*" "*.json" "*.zip"
 
 clean:
-	rm -rf *.zip
+	rm -rf ${ZIP_FILES}
