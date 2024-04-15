@@ -1,4 +1,4 @@
-FOLDERS := tpjs tphtml tpjs2 tpserver
+FOLDERS := tpjs tphtml tpjs2 tpserver tpwebapp
 ZIP_FILES := $(addsuffix .zip,$(FOLDERS))
 
 all: ${ZIP_FILES}
