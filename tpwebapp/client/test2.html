@@ -3,31 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Application</title>
-    <script src="test2.js" defer></script>
+    <title>Client</title>
 </head>
 <body>
-    <div id="menu">
-        <button id="BUTSHOW" onclick="showText()">Show Txt</button>
-        <button id="BUT_ADD" onclick="showAddForm()">Add Element</button>
-        <button id="REMOVE" onclick="showRemoveForm()">Remove Element</button>
-        <button id="CLEAR" onclick="clearJSON()">Clear</button>
-        <button id="RESTORE" onclick="restoreJSON()">Restore</button>
-        <button id="BUTPIE" onclick="showPieChart()">Show Piechart</button>
-        <button id="LOC_PIEB" onclick="showLocalPieChart()">Show Local Piechart</button>
+    <div id="toolbar">
+        <button id="BUTSHOW">show txt</button>
+        <button id="BUT_ADD">add element</button>
+        <button id="REMOVE">remove element</button>
+        <button id="CLEAR">clear</button>
+        <button id="RESTORE">restore</button>
+        <button id="BUTPIE">Show Pie Chart</button>
+        <button id="LOC_PIEB">Show Local Pie Chart</button>
+
+
     </div>
-    <div id="displaySpace">
-        <div id="MAINSHOW"></div>
-        <form id="addForm" style="display:none;">
-            Title: <input type="text" id="titleTF"><br>
-            Value: <input type="number" id="valueTF"><br>
-            Color: <input type="text" id="colorTF"><br>
-            <button id="DOADD" onclick="addElement()">Add</button>
-        </form>
-        <form id="removeForm" style="display:none;">
-            Index to remove: <input type="number" id="indexTF"><br>
-            <button id="VALIDREM" onclick="removeElement()">Remove</button>
-        </form>
+    <div id="MAINSHOW"></div>
+
+    <div id="addForm" style="display:none;">
+        <input type="text" id="titleTF" placeholder="Title">
+        <input type="text" id="colorTF" placeholder="Color">
+        <input type="number" id="valueTF" placeholder="Value">
+        <button id="DOADD">Add</button>
     </div>
+
+    <div id="removeForm" style="display:none;">
+        <input type="text" id="indexTF" placeholder="Index">
+        <button id="VALIDREM">Remove</button>
+    </div>
+
+    <script src="/test2.js"></script>
 </body>
 </html>
