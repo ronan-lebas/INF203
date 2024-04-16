@@ -88,7 +88,7 @@ function showPieChart() {
 
 async function showJSON() {
   try {
-    const response = await fetch('/WWW/storage.json');
+    const response = await fetch('../../Items');
     const data = await response.json();
     console.log(data);
     // Display data in the browser
@@ -142,10 +142,8 @@ function addElement() {
 function removeElement() {
   const index = parseInt(document.getElementById('indexTF').value);
 
-  fetch('../../remove', {
+  fetch('../../remove?index=' + index, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ index }),
   })
   .then(() => {
     document.getElementById('MAINSHOW').innerHTML = 'Element removed.';
